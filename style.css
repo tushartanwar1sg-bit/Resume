@@ -1,0 +1,265 @@
+/* ---------- Base ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #2d3436;
+  background-color: #eef2f7;
+}
+
+a {
+  color: #1e5aa8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #ffffff;
+  padding: 40px 20px;
+}
+
+.header-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  background-color: #ffffff;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  margin: 4px 0 16px;
+  font-style: italic;
+  color: #d6e4ff;
+}
+
+.contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact li {
+  margin-bottom: 4px;
+}
+
+.contact .label {
+  font-weight: bold;
+  display: inline-block;
+  width: 80px;
+}
+
+.contact a {
+  color: #ffffff;
+  border-bottom: 1px dashed #d6e4ff;
+}
+
+.contact a:hover {
+  color: #ffd166;
+  text-decoration: none;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  background-color: #16325c;
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #ffd166;
+  color: #16325c;
+  text-decoration: none;
+}
+
+/* ---------- Main content ---------- */
+main {
+  max-width: 960px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-left: 6px solid #2a5298;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px 28px;
+  margin-bottom: 24px;
+  scroll-margin-top: 70px;
+}
+
+h2 {
+  color: #1e3c72;
+  margin-top: 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e1e8f0;
+}
+
+h3 {
+  color: #2a5298;
+  margin: 10px 0 6px;
+}
+
+/* ---------- Education table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #d0d9e4;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #2a5298;
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f7fb;
+}
+
+tbody tr:hover {
+  background-color: #fff4d6;
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-group {
+  background-color: #f4f7fb;
+  border: 1px solid #d0d9e4;
+  border-radius: 6px;
+  padding: 10px 16px;
+}
+
+.skill-group ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* ---------- Projects ---------- */
+.project {
+  border-bottom: 1px dashed #d0d9e4;
+  padding-bottom: 10px;
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.project p {
+  margin: 4px 0;
+}
+
+.tech {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #6c7a89;
+}
+
+/* ---------- Hobbies ---------- */
+.hobbies {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hobbies li {
+  background-color: #2a5298;
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.hobbies li:hover {
+  background-color: #ffd166;
+  color: #16325c;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #16325c;
+  color: #ffffff;
+  text-align: center;
+  padding: 16px;
+}
+
+footer a {
+  color: #ffd166;
+}
+
+/* ---------- Responsive (tablets & mobiles) ---------- */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact .label {
+    width: auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  /* Let the table scroll sideways instead of breaking the layout */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+}
